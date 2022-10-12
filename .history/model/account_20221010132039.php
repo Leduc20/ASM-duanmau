@@ -1,0 +1,6 @@
+<?php
+function insert_products($name, $filename, $price, $detail, $sale,$idlh)
+{
+    $sql="INSERT INTO products(`name_pro`, `image`, `price`, `detail`, `sale`, `id_dm`) VALUES ('$name','$filename','$price','$detail','$sale','$idlh')";
+    pdo_execute($sql);
+}
