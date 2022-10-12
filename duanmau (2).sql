@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 09, 2022 lúc 02:48 PM
+-- Thời gian đã tạo: Th10 13, 2022 lúc 01:12 AM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -60,9 +60,15 @@ CREATE TABLE `comment` (
   `content` varchar(50) NOT NULL,
   `id_user` int(10) NOT NULL,
   `id_hh` int(10) NOT NULL,
-  `id_vote` int(10) NOT NULL,
-  `date_comment` date NOT NULL
+  `date_comment` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `comment`
+--
+
+INSERT INTO `comment` (`id_comment`, `content`, `id_user`, `id_hh`, `date_comment`) VALUES
+(8, 'dsadsadsa', 6, 39, '11:21:21pm 12/10/2022');
 
 -- --------------------------------------------------------
 
@@ -94,7 +100,8 @@ INSERT INTO ` commodities` (`id_commodities`, `name`) VALUES
 (35, 'apple'),
 (36, 'samsung'),
 (37, 'laptop'),
-(38, 'aso thun ');
+(38, 'Áo thun'),
+(39, 'Oppo');
 
 -- --------------------------------------------------------
 
@@ -120,6 +127,7 @@ CREATE TABLE `products` (
   `price` varchar(20) NOT NULL,
   `detail` varchar(100) NOT NULL,
   `sale` varchar(50) NOT NULL,
+  `view_pro` int(11) NOT NULL,
   `id_dm` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -127,10 +135,11 @@ CREATE TABLE `products` (
 -- Đang đổ dữ liệu cho bảng `products`
 --
 
-INSERT INTO `products` (`id_hh`, `name_pro`, `image`, `price`, `detail`, `sale`, `id_dm`) VALUES
-(30, 'ip 13 max', 'goods_425974_sub11.jpg', '4354353', 'gdfgfdg', '54354', 35),
-(36, 'Iphone 13', 'iphone-13.jpg', '77567', 'dhg', '657657', 35),
-(37, 'Iphone 12', '', '444444444444', '55555', '5555555555555', 35);
+INSERT INTO `products` (`id_hh`, `name_pro`, `image`, `price`, `detail`, `sale`, `view_pro`, `id_dm`) VALUES
+(36, 'Iphone 13 pro mã 256 GB aaa', 'iphone-13.jpg', '77567', 'dhg', '657657', 3, 35),
+(37, 'Iphone 12', 'iphone 12 pro max.jpg', '444444444444', '55555', '5555555555555', 44, 35),
+(38, 'Sam sung', 'sam sung s22 ultra.jpeg', '32323', 'detrfgdgsdr', '4444', 66, 36),
+(39, 'Sam sung ultra', 'sam sung s22.jpg', '34243243', '452432432', '434234', 0, 36);
 
 -- --------------------------------------------------------
 
@@ -143,10 +152,19 @@ CREATE TABLE `user` (
   `name` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `image` varchar(100) NOT NULL,
-  `active` bit(20) NOT NULL,
-  `role` varchar(50) NOT NULL
+  `address` varchar(255) DEFAULT NULL,
+  `phone` int(12) DEFAULT NULL,
+  `role` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `user`
+--
+
+INSERT INTO `user` (`id_user`, `name`, `password`, `email`, `address`, `phone`, `role`) VALUES
+(6, 'ducle', '310302', 'duclqph25312@fpt.edu.vn', NULL, NULL, 0),
+(7, 'lequangduc', '310302', 'ducnhat31032002@gmail.com', NULL, NULL, 1),
+(8, 'ducle', '310302', 'ducnhat31032002@gmail.com', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -244,25 +262,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT cho bảng `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id_comment` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_comment` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng ` commodities`
 --
 ALTER TABLE ` commodities`
-  MODIFY `id_commodities` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id_commodities` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_hh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_hh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -278,8 +296,8 @@ ALTER TABLE `acount_user`
 -- Các ràng buộc cho bảng `comment`
 --
 ALTER TABLE `comment`
-  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
-  ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`id_hh`) REFERENCES `products` (`id_hh`);
+  ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`id_hh`) REFERENCES `products` (`id_hh`),
+  ADD CONSTRAINT `comment_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 
 --
 -- Các ràng buộc cho bảng `commentmanage`
