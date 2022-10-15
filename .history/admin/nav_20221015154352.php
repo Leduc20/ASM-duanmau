@@ -24,7 +24,7 @@
                     <a class="no-underline text-black" href="index.php"><i class="fa-solid fa-store"></i>Trang chủ</a>
                 </li>
                 <li class="ml-[10px] py-3 ml-1 border-[1px] bg-slate-300 rounded-[3px] font-bold hover:bg-white">
-                    <a class="no-underline text-black" href="index.php?act=addlh"><i class="fa-solid fa-list"></i>Loại hàng</a>
+                    <a class="no-underline text-black" href="index.php?act=addlh"><i class="fa-solid fa-house"></i>Loại hàng</a>
                 </li>
                 <li class="ml-[10px] py-3 ml-1 border-[1px] bg-slate-300 rounded-[3px] font-bold hover:bg-white">
                     <a class="no-underline text-black" href="index.php?act=addhh"><i class="fa-solid fa-cart-shopping"></i>Hàng hóa</a>

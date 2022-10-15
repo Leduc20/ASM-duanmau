@@ -33,7 +33,7 @@
             <br>
             <button type="submit" name="checkmail" class="p-2 rounded border mt-2 hover:bg-sky-500 hover:text-white">Tìm lại mật khẩu</button>
            </form>
-           <div class="text-sky-500">
+           <div class="text-">
             <?php
             if(isset($thongbao)){
                 echo $thongbao;
