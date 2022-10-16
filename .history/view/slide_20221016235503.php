@@ -5,19 +5,19 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../content/image/imageslide/slide1.jpg" class="h-[450px] d-block w-100 rounded" alt="...">
+                        <img src="../content/image/imageslide/slide1.jpg" class="d-block w-100 rounded" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../content/image/imageslide/slide2.jpg" class="h-[450px] d-block w-100 rounded" alt="...">
+                        <img src="../content/image/imageslide/slide2.jpg" class="d-block w-100 rounded" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../content/image/logo apple.png" class="h-[450px] d-block w-100 rounded" alt="...">
+                        <img src="../content/image/logo apple.png" class="d-block w-100 rounded" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../content/image/banner lonovo.jpg" class="h-[450px] d-block w-100 rounded" alt="...">
+                        <img src="../content/image/banner lonovo.jpg" class="d-block w-100 rounded" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../content/image/imageslide/slide3.jpg" class="h-[450px] d-block w-100 rounded" alt="...">
+                        <img src="../content/image/imageslide/slide3.jpg" class="d-block w-100 rounded" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

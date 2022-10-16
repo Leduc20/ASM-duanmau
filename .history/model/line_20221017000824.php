@@ -23,7 +23,6 @@ function loadone_line($id)
 }
 function update_line($id,$tenloai)
 {
-    $sql = "UPDATE `commodities` SET name='" . $tenloai . "' WHERE id_commodities=" . $id;
-    
+    $sql = "UPDATE `commodities` SET name='" . $tenloai . "' WHERE id_commodities= . $id;
     pdo_execute($sql);
 }
