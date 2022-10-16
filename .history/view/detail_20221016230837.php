@@ -108,7 +108,7 @@
           <?php
           foreach ($product_like as $show) {
             extract($show);
-            $linksp = "index.php?act=detail&id_hh=" . $id_hh;
+            $linksp = "index.php?act=detail&id_hh" . $id_hh;
             $img = $img_path . $image;
             echo '
         <li class="item-a">

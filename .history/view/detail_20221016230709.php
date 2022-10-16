@@ -108,17 +108,16 @@
           <?php
           foreach ($product_like as $show) {
             extract($show);
-            $linksp = "index.php?act=detail&id_hh=" . $id_hh;
-            $img = $img_path . $image;
+            $linksp = "index.php?act=detail&id_hh" . $id_hh;
             echo '
         <li class="item-a">
         <!--box-slider--------------->
         <div class="box">
           <!--img-box---------->
           <div class="slide-img">
-            <img alt="1" src="' . $img . '"> 
+            <img alt="1" src=""> 
             <div class="overlay">
-              <a href="'.$linksp.'" class="buy-btn">Chi tiết</a>
+              <a href="#" class="buy-btn">Buy Now</a>
             </div>
           </div>
           <!--detail-box--------->

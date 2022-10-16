@@ -33,7 +33,7 @@
                         <div class="border bg-green-200 mt-2 rounded">
                             <p class="ml-3 mt-3">Danh sách hàng hóa</p>
                         </div>
-                        <div class="mt-2 text-emerald-700 font-bold text--500">
+                        <div class="mt-2 text-black-500 font-bold text--500">
                             <?php
                             if (isset($pro)) {
                                 echo $pro;

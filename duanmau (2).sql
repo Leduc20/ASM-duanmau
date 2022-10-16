@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 13, 2022 lúc 01:12 AM
+-- Thời gian đã tạo: Th10 16, 2022 lúc 06:16 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -68,7 +68,11 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`id_comment`, `content`, `id_user`, `id_hh`, `date_comment`) VALUES
-(8, 'dsadsadsa', 6, 39, '11:21:21pm 12/10/2022');
+(10, 'Giá rẻ bất ngời\r\n', 7, 54, '07:52:38pm 14/10/2022'),
+(11, 'Rất đáng mua', 7, 54, '07:52:52pm 14/10/2022'),
+(12, 'Dùng rất đáng tiền', 7, 57, '05:31:18pm 16/10/2022'),
+(13, 'Sam sung rất mượt\r\n', 7, 56, '05:42:35pm 16/10/2022'),
+(14, 'Áo khoác ấm\r\n', 7, 58, '06:10:29pm 16/10/2022');
 
 -- --------------------------------------------------------
 
@@ -84,24 +88,24 @@ CREATE TABLE `commentmanage` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng ` commodities`
+-- Cấu trúc bảng cho bảng `commodities`
 --
 
-CREATE TABLE ` commodities` (
+CREATE TABLE `commodities` (
   `id_commodities` int(11) NOT NULL,
   `name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng ` commodities`
+-- Đang đổ dữ liệu cho bảng `commodities`
 --
 
-INSERT INTO ` commodities` (`id_commodities`, `name`) VALUES
-(35, 'apple'),
-(36, 'samsung'),
-(37, 'laptop'),
-(38, 'Áo thun'),
-(39, 'Oppo');
+INSERT INTO `commodities` (`id_commodities`, `name`) VALUES
+(41, 'Apple'),
+(42, 'Sam Sung'),
+(44, 'Yody'),
+(46, 'Xiaomi'),
+(47, 'Oppo');
 
 -- --------------------------------------------------------
 
@@ -136,10 +140,14 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id_hh`, `name_pro`, `image`, `price`, `detail`, `sale`, `view_pro`, `id_dm`) VALUES
-(36, 'Iphone 13 pro mã 256 GB aaa', 'iphone-13.jpg', '77567', 'dhg', '657657', 3, 35),
-(37, 'Iphone 12', 'iphone 12 pro max.jpg', '444444444444', '55555', '5555555555555', 44, 35),
-(38, 'Sam sung', 'sam sung s22 ultra.jpeg', '32323', 'detrfgdgsdr', '4444', 66, 36),
-(39, 'Sam sung ultra', 'sam sung s22.jpg', '34243243', '452432432', '434234', 0, 36);
+(47, 'Iphone 12 Pro Max', 'iphone 12 pro max.jpg', '14000000', 'Điện thoại iPhone 12 Pro Max: Nâng tầm đẳng cấp sử dụng\r\nCứ mỗi năm, đến dạo cuối tháng 8 và gần đầu', '13900000', 0, 41),
+(52, 'Iphone 12', 'iphone 12 pro max.jpg', '32323', 'Điện thoại iPhone 12 Pro Max: Nâng tầm đẳng cấp sử dụng\r\nCứ mỗi năm, đến dạo cuối tháng 8 và gần đầu', '432432', 0, 41),
+(54, 'Redmi note 8', 'redmi note 8.jpg', '32323', '	Giống như Xiaomi Redmi Note 8 cũ, máy đã kích hoạt được trang bị Snapdragon 660, đi kèm RAM 4GB, 32', '321321', 0, 46),
+(55, 'Xiaomi redmi note 7', 'redmi note 7.jpg', '3000000', 'Giống như Xiaomi Redmi Note 7 cũ, máy đã kích hoạt được trang bị Snapdragon 660, đi kèm RAM 4GB, 32G', '230000', 0, 46),
+(56, 'Sam Sung ultra 21', 'sam sung s22 ultra.jpeg', '1700000', 'Đúng như các thông tin được đồn đoán trước đó, mẫu flagship mới của gả khổng lồ Hàn Quốc được ra mắt', '16000000', 0, 42),
+(57, 'Iphone 13 Pro Max 128 GB', 'iphone 13 promax.jpg', '27890000', 'iPhone 13 Pro Max chắc chắn sẽ là chiếc smartphone cao cấp được quan tâm nhiều nhất trong năm 2021. ', '26789000', 0, 41),
+(58, 'Áo khoác mùa thu dáng đẹp', 'Co-ao-khoac-nam.jpg', '450000', 'Giữ ấm hiệu quả, mang lại sự an tâm cho bạn trong điều kiện thời tiết khắc nghiệt: mưa lạnh, gió mùa', '430000', 0, 44),
+(59, 'Iphone 12', 'iphone-13.jpg', '21000000', 'Điện thoại iPhone 12 Pro Max: Nâng tầm đẳng cấp sử dụng\r\nCứ mỗi năm, đến dạo cuối tháng 8 và gần đầu', '15000000', 0, 41);
 
 -- --------------------------------------------------------
 
@@ -162,9 +170,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `name`, `password`, `email`, `address`, `phone`, `role`) VALUES
-(6, 'ducle', '310302', 'duclqph25312@fpt.edu.vn', NULL, NULL, 0),
-(7, 'lequangduc', '310302', 'ducnhat31032002@gmail.com', NULL, NULL, 1),
-(8, 'ducle', '310302', 'ducnhat31032002@gmail.com', NULL, NULL, 0);
+(6, 'ducle', '310302', 'duclqph25312@fpt.edu.vn', 'ha noi', 21321, 0),
+(7, 'lequangduc', '310302', 'ducnhat31032002@gmail.com', 'Hà Nôi', 2147483647, 1);
 
 -- --------------------------------------------------------
 
@@ -210,9 +217,9 @@ ALTER TABLE `commentmanage`
   ADD KEY `id_comment` (`id_comment`);
 
 --
--- Chỉ mục cho bảng ` commodities`
+-- Chỉ mục cho bảng `commodities`
 --
-ALTER TABLE ` commodities`
+ALTER TABLE `commodities`
   ADD PRIMARY KEY (`id_commodities`);
 
 --
@@ -262,25 +269,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT cho bảng `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id_comment` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_comment` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng ` commodities`
+-- AUTO_INCREMENT cho bảng `commodities`
 --
-ALTER TABLE ` commodities`
-  MODIFY `id_commodities` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+ALTER TABLE `commodities`
+  MODIFY `id_commodities` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_hh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_hh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -317,7 +324,7 @@ ALTER TABLE `goodsmanage`
 -- Các ràng buộc cho bảng `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id_dm`) REFERENCES ` commodities` (`id_commodities`);
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id_dm`) REFERENCES `commodities` (`id_commodities`);
 
 --
 -- Các ràng buộc cho bảng `usermanage`

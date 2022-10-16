@@ -1,3 +1,5 @@
+
+
 <body>
 
   <?php
@@ -108,17 +110,16 @@
           <?php
           foreach ($product_like as $show) {
             extract($show);
-            $linksp = "index.php?act=detail&id_hh=" . $id_hh;
-            $img = $img_path . $image;
+            $linksp = "index.php?act=detail&id_hh" . $id_hh;
             echo '
         <li class="item-a">
         <!--box-slider--------------->
         <div class="box">
           <!--img-box---------->
           <div class="slide-img">
-            <img alt="1" src="' . $img . '"> 
+            <img alt="1" src=""> 
             <div class="overlay">
-              <a href="'.$linksp.'" class="buy-btn">Chi tiết</a>
+              <a href="#" class="buy-btn">Buy Now</a>
             </div>
           </div>
           <!--detail-box--------->
@@ -142,7 +143,47 @@
 
       </div>
     </div>
+    <section class="slider">
+                    <ul id="autoWidth" class="Cs-hidden">
+                        <!--1------------------------------------>
+                        <?php
+                        foreach ($top10 as $show) {
+                            extract($show);
+                            $linksp = "index.php?act=detail&id_hh=" . $id_commodities;
+                            $img = $img_path . $image;
+                            echo '
+                            <li class="item-a">
+                            <!--box-slider--------------->
+                            <div class="box">
+                                <!--img-box---------->
+                                <div class="slide-img">
+                                <img alt="1" src="' . $img . '"">
+                                    <!--overlayer---------->
+                                    <div class="overlay">
+                                        <!--buy-btn------>
+                                        <a href="' . $linksp . '" class="buy-btn">Chi tiet</a>
+                                    </div>
+                                </div>
+                                <!--detail-box--------->
+                                <div class="detail-box">
+                                    <!--type-------->
+                                    <div class="type">
+                                        <a href="#">' . $name_pro . '</a>
+                                        <span></span>
+                                    </div>
+                                    <!--price-------->
+                                    <a href="#" class="price">$' . $name_pro . '</a>
 
+                                </div>
+
+                            </div>
+                        </li>';
+                        }
+                        ?>
+
+
+                    </ul>
+                </section>
   </div>
 
 

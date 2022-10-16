@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- slider product -->
+  <!--page-icon------------>
+  <link rel="shortcut icon" href="images/logo.png">
+  <!--stylesheet------------->
+  <link rel="stylesheet" type="text/css" href="../slide pro/css/sliepro.css">
+  <!--light-slider.css------------->
+  <link rel="stylesheet" type="text/css" href="../slide pro/css/lightslider.css">
+  <!--Jquery-------------------->
+  <script type="text/javascript" src="../slide pro/js/jquery.js"></script>
+  <!--lightslider.js--------------->
+  <script type="text/javascript" src="../slide pro/js/lightslider.js"></script>
+  <!-- thư viện jquery show comment -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
 <body>
 
   <?php
@@ -103,24 +126,18 @@
     </div>
     <div>
       <div class="slider">
-        <ul id="autoWidth" class="Cs-hidden">
+        <ul id="autoWidth" class="cS-hidden">
           <!--1------------------------------------>
           <?php
           foreach ($product_like as $show) {
             extract($show);
-            $linksp = "index.php?act=detail&id_hh=" . $id_hh;
-            $img = $img_path . $image;
+            $linksp = "index.php?act=detail&id_hh" . $id_hh;
             echo '
         <li class="item-a">
         <!--box-slider--------------->
         <div class="box">
           <!--img-box---------->
-          <div class="slide-img">
-            <img alt="1" src="' . $img . '"> 
-            <div class="overlay">
-              <a href="'.$linksp.'" class="buy-btn">Chi tiết</a>
-            </div>
-          </div>
+          
           <!--detail-box--------->
           <div class="detail-box">
             <!--type-------->
@@ -138,11 +155,15 @@
         ';
           }
           ?>
-          <!-- image slider products -->
-
+          image slider products -->
+          <!-- <div class="slide-img">
+            <img alt="1" src=""> 
+            <div class="overlay">
+              <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+          </div>
       </div>
     </div>
-
   </div>
 
 
