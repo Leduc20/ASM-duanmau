@@ -358,7 +358,7 @@
                         <?php
                         foreach ($top10 as $show) {
                             extract($show);
-                            $linksp = "index.php?act=detail&id_hh=" . $id_hh;
+                            $linksp = "index.php?act=detail&id_hh=" . $id_commodities;
                             $img = $img_path . $image;
                             echo '
                             <li class="item-a">

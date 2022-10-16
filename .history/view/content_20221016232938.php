@@ -70,14 +70,14 @@
             </div>
         </div>
         <div class="mx-auto md:w-[1200px] mt-[55px]">
-            <!-- <div class="flex justify-between mt-3 md:border-b-2 font-bold">
+            <div class="flex justify-between mt-3 md:border-b-2 font-bold">
                 <p class="text-[20px]">
                     ĐANG GIẢM GIÁ
                 </p>
                 <p class="hidden md:block">
                     <a class="text-[#0088CC]" href="">XEM TẤT CẢ</a>
                 </p>
-            </div> -->
+            </div>
             <!-- <div class="flex justify-between grid grid-cols-1 gap-4 md:grid-cols-4 gap-8 mt-6">
                 <div class="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
                     <div>
@@ -358,7 +358,7 @@
                         <?php
                         foreach ($top10 as $show) {
                             extract($show);
-                            $linksp = "index.php?act=detail&id_hh=" . $id_hh;
+                            $linksp = "index.php?act=detail&id_hh=" . $id_commodities;
                             $img = $img_path . $image;
                             echo '
                             <li class="item-a">

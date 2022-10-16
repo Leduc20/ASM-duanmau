@@ -55,7 +55,7 @@
                 <!-- <a href="index.html"><i class="fa-solid fa-magnifying-glass"></i></a> -->
             </div>
             <div>
-                <a href="../view/index.php"><img class="w-[70px]" src="../content/image/Screenshot__902_-removebg-preview.png" alt=""></a>
+                <a href="../admin/"><img class="w-[70px]" src="../content/image/Screenshot__902_-removebg-preview.png" alt=""></a>
             </div>
             <div class="">
                 <form action="index.php?act=sanpham" method="post">

@@ -36,8 +36,8 @@
                         </div>
                         <div class="mt-2 text-emerald-700 font-bold text--500">
                             <?php
-                            if (isset($del_cmt)) {
-                                echo $del_cmt;
+                            if (isset($)) {
+                                echo $pro;
                             }
                             ?>
                         </div>

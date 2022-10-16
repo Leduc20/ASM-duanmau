@@ -54,9 +54,6 @@
             <div class="">
                 <!-- <a href="index.html"><i class="fa-solid fa-magnifying-glass"></i></a> -->
             </div>
-            <div>
-                <a href="../view/index.php"><img class="w-[70px]" src="../content/image/Screenshot__902_-removebg-preview.png" alt=""></a>
-            </div>
             <div class="">
                 <form action="index.php?act=sanpham" method="post">
                     <select name="" id="" class="border-[1px] w-[80px]">

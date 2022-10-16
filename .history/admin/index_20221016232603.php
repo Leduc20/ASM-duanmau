@@ -173,7 +173,7 @@ if (isset($_GET['act'])) {
             if (isset($_GET['id_cmt']) && ($_GET['id_cmt'] > 0)) {
                 $del_cmt = $_GET['id_cmt'];
                 delete_cmt($del_cmt);
-                $del_cmt = "Xóa thành công";
+                $acc = "Xóa thành công";
             }
             $list_cmt = loadall_cmt(0);
             include "./comment/list.php";

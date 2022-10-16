@@ -129,7 +129,7 @@
               <span>Noe Arrival</span>
             </div>
             <!--price-------->
-            <a href="#" class="price">'.$price.'VNĐ</a>
+            <a href="#" class="price">'.$price.' VNĐ</a>
 
           </div>
 
